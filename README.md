@@ -168,7 +168,8 @@ chama resolve `hasSession` e passa pronto. Mesmo padrão já em produção em
 `brito-skynet/proxy.ts` e `casa-inteligente/web/proxy.ts`.
 
 ```ts
-// src/proxy.ts (Next 16) — estilo cookie-jose (checa cookie próprio direto)
+// src/proxy.ts (Next 16) — estilo "cookie-jose": o próprio proxy checa o
+// cookie de sessão (NextAuth/jose) direto, sem depender de outra lib
 import { NextResponse, type NextRequest } from "next/server";
 import { createSsoGuard } from "@paulo-brito-jr/auth-client/middleware";
 
@@ -193,7 +194,10 @@ export const config = {
 ```
 
 ```ts
-// estilo NextAuth credentials — sessão resolvida via lib própria (ex: Supabase updateSession)
+// estilo "NextAuth credentials"/lib própria: a resolução de sessão fica
+// delegada pra lib de auth do próprio app (Supabase updateSession aqui;
+// serve igual pra um provider Credentials do NextAuth com sua própria
+// checagem de sessão)
 import { createSsoGuard } from "@paulo-brito-jr/auth-client/middleware";
 import { updateSession } from "@/lib/supabase/middleware";
 
