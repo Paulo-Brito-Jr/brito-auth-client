@@ -1,0 +1,47 @@
+{
+  "name": "@paulo-brito-jr/auth-client",
+  "version": "0.1.0",
+  "description": "Cliente canônico de SSO + RBAC do Brito Auth pros apps da família Brito (JWT, permissões com wildcard, guard de middleware).",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist/**",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./sso": {
+      "types": "./dist/sso.d.ts",
+      "import": "./dist/sso.js"
+    },
+    "./permissions": {
+      "types": "./dist/permissions.d.ts",
+      "import": "./dist/permissions.js"
+    },
+    "./middleware": {
+      "types": "./dist/middleware.d.ts",
+      "import": "./dist/middleware.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint:strict": "echo '[pendente] eslint nao instalado neste pacote ainda (ver README > Pendencias) - stub sempre verde'",
+    "prepare": "git config core.hooksPath .githooks || true",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paulo-Brito-Jr/brito-auth-client.git"
+  },
+  "homepage": "https://github.com/Paulo-Brito-Jr/brito-auth-client",
+  "dependencies": {
+    "jose": "6.2.3"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

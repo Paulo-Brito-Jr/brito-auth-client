@@ -1,0 +1,1 @@
+{"version":3,"file":"jwt.d.ts","sourceRoot":"","sources":["../src/jwt.ts"],"names":[],"mappings":"AASA,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAE3C,+EAA+E;AAC/E,eAAO,MAAM,iBAAiB,eAAe,CAAC;AAC9C,iFAAiF;AACjF,eAAO,MAAM,mBAAmB,eAAe,CAAC;AAEhD;;;;;;;GAOG;AACH,wBAAsB,cAAc,CAAC,KAAK,EAAE,MAAM,EAAE,MAAM,EAAE,MAAM,GAAG,OAAO,CAAC,QAAQ,CAAC,CAerF"}
