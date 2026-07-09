@@ -29,6 +29,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types",
     "lint:strict": "echo '[pendente] eslint nao instalado neste pacote ainda (ver README > Pendencias) - stub sempre verde'",
     "prepare": "git config core.hooksPath .githooks || true",
     "prepublishOnly": "npm run build"
